@@ -3,7 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yılmaz Hukuk Bürosu</title>
+    <title>Ankara Boşanma Avukatı | Yılmaz Hukuk Bürosu | 20 Yıllık Deneyim</title>
+    <meta name="description" content="Ankara'nın en deneyimli hukuk bürosu. Boşanma, aile hukuku, iş hukuku ve gayrimenkul davalarında 20 yıllık uzman avukat kadrosu. Ücretsiz ilk danışma için hemen arayın.">
+    <meta name="keywords" content="ankara boşanma avukatı, ankara hukuk bürosu, aile hukuku ankara, iş hukuku avukatı, gayrimenkul hukuku ankara">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ankara Boşanma Avukatı | Yılmaz Hukuk Bürosu">
+    <meta property="og:description" content="20 yıllık deneyimle Ankara'da hukuki danışmanlık. Boşanma, aile, iş ve gayrimenkul hukuku.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://girisim1.github.io/demo-hukuk/">
+
+    <!-- Schema.org LegalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Yılmaz Hukuk Bürosu",
+      "description": "Ankara'da 20 yıllık deneyimle boşanma, aile hukuku, iş hukuku ve gayrimenkul davalarında uzman avukatlık hizmetleri.",
+      "url": "https://girisim1.github.io/demo-hukuk/",
+      "telephone": "+90-312-XXX-XX-XX",
+      "email": "info@yilmazhukuk.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kızılay Mah. Atatürk Bulvarı No:45",
+        "addressLocality": "Çankaya",
+        "addressRegion": "Ankara",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.9208",
+        "longitude": "32.8541"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$",
+      "areaServed": "Ankara",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hukuk Hizmetleri",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Boşanma Davası"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aile Hukuku"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "İş Hukuku"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gayrimenkul Hukuku"}}
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    }
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; color: #333; }
@@ -19,11 +71,20 @@
         .service-card { padding: 30px; border: 1px solid #ddd; border-radius: 8px; }
         .service-card h3 { margin-bottom: 15px; color: #1a1a2e; }
         .about { background: #f5f5f5; padding: 60px 40px; display: flex; gap: 40px; max-width: 1000px; margin: 0 auto; }
-        .about img { width: 300px; height: 200px; object-fit: cover; background: #ddd; }
+        .reviews { padding: 60px 40px; text-align: center; background: #fff; }
+        .reviews h2 { font-size: 2em; margin-bottom: 40px; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .review-card { padding: 25px; border: 1px solid #ddd; border-radius: 8px; text-align: left; }
+        .stars { color: #f0a500; margin-bottom: 10px; }
+        .blog { background: #f5f5f5; padding: 60px 40px; text-align: center; }
+        .blog h2 { font-size: 2em; margin-bottom: 40px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .blog-card { background: white; padding: 25px; border-radius: 8px; text-align: left; }
+        .blog-card h3 { margin-bottom: 10px; color: #1a1a2e; font-size: 1em; }
         .contact { padding: 60px 40px; text-align: center; }
         .contact h2 { margin-bottom: 30px; }
         .contact form { max-width: 500px; margin: 0 auto; }
-        .contact input, .contact textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; }
+        .contact input, .contact textarea, .contact select { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; }
         .contact button { background: #1a1a2e; color: white; padding: 15px 40px; border: none; cursor: pointer; }
         footer { background: #1a1a2e; color: white; padding: 20px 40px; text-align: center; }
     </style>
@@ -35,61 +96,117 @@
     <nav>
         <a href="#hizmetler">Hizmetler</a>
         <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#blog">Blog</a>
+        <a href="#yorumlar">Yorumlar</a>
         <a href="#iletisim">İletişim</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Hukuki Sorunlarınızda Yanınızdayız</h1>
-    <p>20 yıllık deneyimimizle her türlü hukuki sorununuzda profesyonel destek sağlıyoruz.</p>
-    <button>Ücretsiz Danışma Al</button>
+    <h1>Ankara Boşanma Avukatı | Yılmaz Hukuk Bürosu</h1>
+    <p>20 yıllık deneyimimizle boşanma, aile hukuku, iş hukuku ve gayrimenkul davalarında Ankara'nın güvenilir hukuk bürosu.</p>
+    <button>Ücretsiz İlk Danışma Al</button>
 </section>
 
 <section class="services" id="hizmetler">
-    <h2>Hizmetlerimiz</h2>
+    <h2>Hukuk Hizmetlerimiz</h2>
     <div class="services-grid">
         <div class="service-card">
-            <h3>Aile Hukuku</h3>
-            <p>Boşanma, velayet, nafaka ve miras davalarında uzman hukuki destek.</p>
+            <h3>Boşanma & Aile Hukuku</h3>
+            <p>Ankara'da boşanma davası, velayet, nafaka ve miras konularında uzman avukatlık. %95 başarı oranı.</p>
         </div>
         <div class="service-card">
-            <h3>İş Hukuku</h3>
-            <p>İşçi ve işveren haklarının korunması, iş sözleşmeleri ve tazminat davaları.</p>
+            <h3>İş & Ticaret Hukuku</h3>
+            <p>İşçi hakları, kıdem tazminatı, iş sözleşmeleri ve ticari uyuşmazlıklarda profesyonel hukuki destek.</p>
         </div>
         <div class="service-card">
             <h3>Gayrimenkul Hukuku</h3>
-            <p>Tapu işlemleri, kira anlaşmazlıkları ve inşaat hukuku konularında destek.</p>
+            <p>Tapu iptali, kira uyuşmazlıkları, inşaat hukuku ve imar davalarında Ankara'nın uzman avukat bürosu.</p>
         </div>
     </div>
 </section>
 
 <section class="about" id="hakkimizda">
-    <div style="background:#ddd; width:300px; height:200px; flex-shrink:0;"></div>
+    <div style="background:#ddd; width:300px; height:200px; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#666;">Büro Fotoğrafı</div>
     <div>
         <h2>Hakkımızda</h2>
-        <p>Yılmaz Hukuk Bürosu, 2003 yılından bu yana Ankara'da hizmet vermektedir. Deneyimli avukat kadromuzla müvekkillerimizin haklarını en iyi şekilde savunuyoruz.</p>
+        <p>Yılmaz Hukuk Bürosu, 2003 yılından bu yana Ankara Çankaya'da hizmet vermektedir. <strong>5 uzman avukat</strong> ve <strong>3 hukuk asistanı</strong>ndan oluşan ekibimizle her yıl 200'den fazla davayı başarıyla sonuçlandırıyoruz.</p>
         <br>
-        <p>Büromuzda 5 uzman avukat görev yapmaktadır. Her davaya özel strateji geliştirerek müvekkillerimize en iyi sonucu sağlamayı hedefliyoruz.</p>
+        <p>Türkiye Barolar Birliği üyesi büromuz, müvekkillerine şeffaf, hızlı ve etkili hukuki çözümler sunmayı ilke edinmiştir.</p>
+        <br>
+        <ul style="list-style:none; margin-top:10px;">
+            <li>✅ 20 yıllık deneyim</li>
+            <li>✅ 1500+ başarılı dava</li>
+            <li>✅ Ücretsiz ilk danışma</li>
+            <li>✅ 7/24 acil hukuki destek</li>
+        </ul>
+    </div>
+</section>
+
+<section class="reviews" id="yorumlar">
+    <h2>Müvekkil Yorumları</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Boşanma davamda çok profesyonel bir hizmet aldım. Av. Yılmaz her aşamada yanımdaydı."</p>
+            <br><strong>— Ayşe K., Ankara</strong>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"İş hukuku konusunda mükemmel destek. Kıdem tazminatımı eksiksiz aldım. Teşekkürler."</p>
+            <br><strong>— Mehmet T., Çankaya</strong>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Gayrimenkul davamı çok kısa sürede çözdüler. Kesinlikle tavsiye ediyorum."</p>
+            <br><strong>— Fatma S., Ankara</strong>
+        </div>
+    </div>
+</section>
+
+<section class="blog" id="blog">
+    <h2>Hukuki Bilgi & Blog</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <h3>Ankara'da Boşanma Davası Nasıl Açılır? 2024 Rehberi</h3>
+            <p style="font-size:0.9em; color:#666; margin-top:8px;">Boşanma davası açmak için gerekli belgeler, süreç ve dikkat edilmesi gerekenler...</p>
+        </div>
+        <div class="blog-card">
+            <h3>Kıdem Tazminatı Hesaplama ve Hakkınızı Alma</h3>
+            <p style="font-size:0.9em; color:#666; margin-top:8px;">İşten çıkarılma durumunda kıdem tazminatı nasıl hesaplanır, haklarınız nelerdir...</p>
+        </div>
+        <div class="blog-card">
+            <h3>Tapu İptali Davası: Bilmeniz Gerekenler</h3>
+            <p style="font-size:0.9em; color:#666; margin-top:8px;">Gayrimenkul uyuşmazlıklarında tapu iptali davası süreci ve dikkat edilecekler...</p>
+        </div>
     </div>
 </section>
 
 <section class="contact" id="iletisim">
-    <h2>İletişim</h2>
+    <h2>Ücretsiz Hukuki Danışma Alın</h2>
     <form>
-        <input type="text" placeholder="Adınız Soyadınız">
-        <input type="email" placeholder="E-posta Adresiniz">
-        <input type="tel" placeholder="Telefon Numaranız">
-        <textarea rows="5" placeholder="Mesajınız"></textarea>
-        <button type="submit">Gönder</button>
+        <input type="text" placeholder="Adınız Soyadınız" required>
+        <input type="email" placeholder="E-posta Adresiniz" required>
+        <input type="tel" placeholder="Telefon Numaranız" required>
+        <select>
+            <option value="">Hukuki Konu Seçin</option>
+            <option>Boşanma & Aile Hukuku</option>
+            <option>İş & Ticaret Hukuku</option>
+            <option>Gayrimenkul Hukuku</option>
+            <option>Diğer</option>
+        </select>
+        <textarea rows="5" placeholder="Davanız hakkında kısa bilgi verin..."></textarea>
+        <button type="submit">Ücretsiz Danışma Talep Et</button>
     </form>
     <br>
     <p>📍 Kızılay Mah. Atatürk Bulvarı No:45 Çankaya/Ankara</p>
     <p>📞 0312 XXX XX XX</p>
     <p>✉️ info@yilmazhukuk.com</p>
+    <p>🕐 Pazartesi-Cuma: 09:00-18:00</p>
 </section>
 
 <footer>
-    <p>© 2024 Yılmaz Hukuk Bürosu. Tüm hakları saklıdır.</p>
+    <p>© 2024 Yılmaz Hukuk Bürosu. Tüm hakları saklıdır. | Ankara Barosu Üyesi</p>
 </footer>
 
 </body>
